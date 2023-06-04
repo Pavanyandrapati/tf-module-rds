@@ -60,3 +60,5 @@ resource "aws_rds_cluster_instance" "cluster_instances" {
   engine_version     = aws_rds_cluster.main.engine_version
   tags               = merge(var.tags, { Name = "${var.name}-${var.env}-rds-${count.index + 1}" })
 }
+
+
